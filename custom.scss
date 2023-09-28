@@ -1,0 +1,31 @@
+/* Import Bootstrap SCSS */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Define custom colors */
+$navbar-bg-color: #3498db; /* Blue background for navbar */
+$sidebar-bg-color: #2ecc71; /* Green background for sidebar */
+$post-card-bg-color: #f1c40f; /* Yellow background for post card */
+
+/* Use the z-index variables for your custom styles */
+.custom-dropdown {
+    z-index: $zindex-dropdown;
+}
+
+.custom-modal {
+    z-index: $zindex-modal;
+}
+
+/* Apply custom colors */
+.navbar {
+    background-color: $navbar-bg-color;
+}
+
+.sidebar {
+    background-color: $sidebar-bg-color;
+}
+
+.post-card {
+    background-color: $post-card-bg-color;
+}
+
+/* Define other custom styles and components as needed */

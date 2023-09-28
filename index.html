@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Include the compiled CSS file -->
+    <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 1030;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Social Media App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3" style="z-index: 1030;">
+                <div class="card">
+                    <div class="card-body sidebar">
+                        <h5 class="card-title">User Profile</h5>
+                        <p class="card-text">User info and photo</p>
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Feed -->
+            <div class="col-md-9">
+                <!-- Post Card -->
+                <div class="card mb-4 post-card" style="z-index: 1055;">
+                    <div class="card-body">
+                        <h5 class="card-title">User Name</h5>
+                        <p class="card-text">Post content goes here...</p>
+                        <a href="#" class="btn btn-primary">Like</a>
+                        <a href="#" class="btn btn-secondary">Comment</a>
+                    </div>
+                </div>
+
+                <!-- Add your additional post cards here -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript and other dependencies (if needed) -->
+    <!-- Bootstrap JavaScript and jQuery scripts here -->
+</body>
+</html>
