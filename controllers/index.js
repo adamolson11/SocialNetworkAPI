@@ -1,25 +1,16 @@
+const express = require('express');
+const router = express.Router();
 
-const express = require('express').Router;
-const app = express();
-
-// these are my middle ware route imports. 
-const userRoutes = require('./userRoutes'); 
-const thoughtRoutes = require('./thoughtRoutes'); 
+// These are your middleware route imports.
+const userRoutes = require('./userController');
+const thoughtRoutes = require('./thoughtControllers');
 
 // Use middleware for parsing JSON data and handling URL-encoded data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true })); //this allows you to use URL-encoded data
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
 
 // Use your routes
-app.use('/api/users', userRoutes);
-app.use('/api/thoughts', thoughtRoutes);
-
-
-
-// I don't need this anymore because I already have a server.js file to run the server.
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+router.use('/users', userRoutes);
+router.use('/thoughts', thoughtRoutes);
 
 module.exports = router;
