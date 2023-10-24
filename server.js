@@ -1,6 +1,6 @@
 const express = require('express');
 const connection = require('./config/connection');
-const router = require('./controllers');
+const router = require('./routes');
 
 const { User, Thought } = require('./models');
 
