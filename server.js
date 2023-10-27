@@ -29,3 +29,8 @@ app.listen(PORT, () => {
 // });
 
 // thought.save().then(savedThought => console.log(savedThought));
+
+//still having trouble with these................................................
+// Delete a thought and remove them from the user
+  // Remove reaction from a thought 
+  

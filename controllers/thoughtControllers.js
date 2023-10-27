@@ -1,5 +1,5 @@
 const { ObjectId } = require('mongoose').Types;
-const { Thought, Course } = require('../models');
+const { Thought, User } = require('../models');
 
 
 module.exports = {
@@ -48,7 +48,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // Delete a thought and remove them from the course
+  // Delete a thought and remove them from the user
+
   async deleteThought(req, res) {
     try {
       const thought = await Thought.findOneAndRemove({ _id: req.params.thoughtId });
@@ -57,15 +58,15 @@ module.exports = {
         return res.status(404).json({ message: 'No such thought exists' });
       }
 
-      const course = await Course.findOneAndUpdate(
+      const user = await User.findOneAndUpdate(
         { thoughts: req.params.thoughtId },
         { $pull: { thoughts: req.params.thoughtId } },
         { new: true }
       );
 
-      if (!course) {
+      if (!user) {
         return res.status(404).json({
-          message: 'Thought deleted, but no courses found',
+          message: 'Thought deleted, but no users found',
         });
       }
 
@@ -99,7 +100,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // Remove reaction from a thought
+  // Remove reaction from a thought 
+  //still having trouble with this one
   async removeReaction(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(

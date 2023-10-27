@@ -42,7 +42,7 @@ const thoughtSchema = new Schema({
   reactions: [reactionSchema], // Array of nested documents created with the reactionSchema
 });
 
-// Create a virtual called reactionCount to retrieve the length of the thought's reactions array field on query
+//virtual...
 thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
