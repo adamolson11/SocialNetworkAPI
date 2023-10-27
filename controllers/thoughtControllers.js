@@ -10,7 +10,7 @@ module.exports = {
 
       const thoughtObj = {
         thoughts,
-        headCount: await headCount(),
+      //  headCount: await headCount(),
       };
 
       res.json(thoughtObj);
@@ -31,7 +31,7 @@ module.exports = {
 
       res.json({
         thought,
-        grade: await grade(req.params.thoughtId),
+       // grade: await grade(req.params.thoughtId),
       });
     } catch (err) {
       console.log(err);
@@ -44,6 +44,7 @@ module.exports = {
       const thought = await Thought.create(req.body);
       res.json(thought);
     } catch (err) {
+      console.error("Error creating thought:", err);
       res.status(500).json(err);
     }
   },

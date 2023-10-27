@@ -1,10 +1,10 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose'); // Import Types from mongoose
 
-// this defines the reaction schema for the data in your collection
+// Define the Reaction schema
 const reactionSchema = new Schema({
   reactionId: {
     type: Schema.Types.ObjectId,
-    default: () => new mongoose.Types.ObjectId(),
+    default: () => new Types.ObjectId(), // Use mongoose.Types.ObjectId()
   },
   reactionBody: {
     type: String,
@@ -18,11 +18,11 @@ const reactionSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    get: (timestamp) => new Date(timestamp).toLocaleString(), // Formats the timestamp on query
+    get: (timestamp) => new Date(timestamp).toLocaleString(), // Format the timestamp on query
   },
 });
 
-// This Definest the Thought schema
+// Define the Thought schema
 const thoughtSchema = new Schema({
   thoughtText: {
     type: String,
